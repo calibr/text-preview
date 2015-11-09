@@ -1,0 +1,32 @@
+{
+  "name": "text-preview",
+  "version": "0.1.0",
+  "description": "Strip HTML tags from document and makes short text preview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calibr/text-preview.git"
+  },
+  "keywords": [
+    "short",
+    "text",
+    "html",
+    "preview"
+  ],
+  "author": "calibr <awcalibr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calibr/text-preview/issues"
+  },
+  "homepage": "https://github.com/calibr/text-preview",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "string": "^3.3.1"
+  },
+  "devDependencies": {
+    "should": "^7.1.1"
+  }
+}
