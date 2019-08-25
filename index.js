@@ -3,7 +3,10 @@ var S = require("string");
 
 var newLineTags = ["p", "div", "br"];
 
-function crop(str, length) {
+function crop(str, length, opts = {}) {
+  opts = Object.assign({
+    stripTags: true
+  }, opts)
   length = length || 100;
   var textShort = S(str).decodeHtmlEntities().s;
   var regExpStr = [];
@@ -15,8 +18,12 @@ function crop(str, length) {
   textShort = textShort.replace(regExp, function(m) {
     return m + "\n";
   });
-  textShort = S(textShort).stripTags().collapseWhitespace().trim().s;
-  textShort = _.trunc(textShort, length);
+  textShort = S(textShort)
+  if(opts.stripTags) {
+    textShort = textShort.stripTags()
+  }
+  textShort = textShort.collapseWhitespace().trim().s;
+  textShort = _.truncate(textShort, {length});
   return textShort;
 }
 

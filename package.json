@@ -1,10 +1,10 @@
 {
   "name": "text-preview",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Strip HTML tags from document and makes short text preview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,11 @@
   },
   "homepage": "https://github.com/calibr/text-preview",
   "dependencies": {
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.13",
     "string": "^3.3.1"
   },
   "devDependencies": {
+    "mocha": "^6.2.0",
     "should": "^7.1.1"
   }
 }
